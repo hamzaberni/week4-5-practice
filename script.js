@@ -1,20 +1,62 @@
-const arr = [1, 2, 3, 4, 5]
+const data = [
+    {
+        name: "Kovács János",
+        age: 29,
+        subjects: [
+            {
+                subjectName: "Maths",
+                subjectGrade: 5
+            },
+            {
+                subjectName: "Physics",
+                subjectGrade: 3
+            },
+            {
+                subjectName: "English",
+                subjectGrade: 2
+            }
+        ]
+    },
+    {
+        name: "Kiss Péter",
+        age: 23,
+        subjects: [
+            {
+                subjectName: "Maths",
+                subjectGrade: 2
+            },
+            {
+                subjectName: "Physics",
+                subjectGrade: 5
+            },
+            {
+                subjectName: "English",
+                subjectGrade: 5
+            }
+        ]
+    },
+    {
+        name: "Nagy Lajos",
+        age: 65,
+        subjects: [
+            {
+                subjectName: "Maths",
+                subjectGrade: 3
+            },
+            {
+                subjectName: "Physics",
+                subjectGrade: 4
+            },
+            {
+                subjectName: "English",
+                subjectGrade: 3
+            }
+        ]
+    }
+]
 
-function returnDouble(number) {
-    return number * 2
-}
-
-
-const returnDouble2 = (number) => {
-    return number * 2   //return és zárójel elhagyható
-}
-
-for (let i = 0; i < arr.length; i++) {
-    console.log(returnDouble(arr[i]))
-}
-
-function logDouble(number) {
-    console.log(number * 2)
-}
-
-arr.forEach(logDouble)
+data.forEach(student => {
+    console.log(student.name)
+    
+    student.subjects.forEach(subject => console.log(`${subject.subjectName}: ${subject.subjectGrade}`))
+})  //ezt a kódot ki kell menteni, hogy meglegyen!!
