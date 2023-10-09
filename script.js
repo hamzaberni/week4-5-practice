@@ -1,62 +1,37 @@
-const data = [
+/*const arr = ['alma', "körte", "banán"]
+arr.push("szilva", "birs", "szőlő")
+
+console.log(arr.join()) */
+
+
+const users = [
+    {
+        name: "Gipsz Jakab",
+        age: 26
+    },
     {
         name: "Kovács János",
-        age: 29,
-        subjects: [
-            {
-                subjectName: "Maths",
-                subjectGrade: 5
-            },
-            {
-                subjectName: "Physics",
-                subjectGrade: 3
-            },
-            {
-                subjectName: "English",
-                subjectGrade: 2
-            }
-        ]
+        age: 54
     },
     {
-        name: "Kiss Péter",
-        age: 23,
-        subjects: [
-            {
-                subjectName: "Maths",
-                subjectGrade: 2
-            },
-            {
-                subjectName: "Physics",
-                subjectGrade: 5
-            },
-            {
-                subjectName: "English",
-                subjectGrade: 5
-            }
-        ]
-    },
-    {
-        name: "Nagy Lajos",
-        age: 65,
-        subjects: [
-            {
-                subjectName: "Maths",
-                subjectGrade: 3
-            },
-            {
-                subjectName: "Physics",
-                subjectGrade: 4
-            },
-            {
-                subjectName: "English",
-                subjectGrade: 3
-            }
-        ]
+        name: "Hamza Bernadett",
+        age: 23
     }
 ]
 
-data.forEach(student => {
-    console.log(student.name)
-    
-    student.subjects.forEach(subject => console.log(`${subject.subjectName}: ${subject.subjectGrade}`))
-})  //ezt a kódot ki kell menteni, hogy meglegyen!!
+//const userNames = []
+
+//const result = users.forEach((user) => userNames.push(user.name))*/
+
+const userNames = users.map((user, index) => {
+   return {
+    name: user.name,
+    age: user.age,
+    id: index + 1
+   }
+   
+})
+//EZZEL TULAJDONKÉPPEN EGY ÚJ TÖMBÖT CSINÁLTUNK, AMI UGYANAZOKBÓL AZ ELEMEKBŐL ÁLLNAK, CSAK MI ADJUK MEG, HOGY MIBŐL ÁLL ÉS KAP EGY ID-T IS
+console.log(userNames)
+
+//console.log(result)
